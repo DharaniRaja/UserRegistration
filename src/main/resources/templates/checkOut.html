@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({pageLanguage: 'en'}, 'google_translate_element');
+        }
+    </script>
+    <script type="text/javascript"
+            src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            position: relative;
+            box-sizing: border-box;
+        }
+
+        .cart-section {
+            width: 100%;
+            float: left;
+            padding: 1%;
+            border-bottom: 0.01em solid #dddbdb;
+        }
+
+
+        #image-3 {background-image: url("https://sc01.alicdn.com/kf/UT8ovSIXQNaXXagOFbXt/Fresh-Passion-Fruit-with-Best-Price-and.jpg")}
+
+        #image-7 {background-image: url("http://www.hesca.org/wp-content/uploads/2016/08/banana.jpg")}
+
+        #image-10 {background-image: url("https://www.parhlo.com/wp-content/uploads/2016/04/Valencia_market_-_lemons-1940x1454.jpg")}
+
+        h2, h3 {
+            float: left;
+            font-family: 'Roboto', sans-serif;
+            font-weight: 400;
+            font-size: 1em;
+            text-transform: uppercase;
+            margin: 0.2em auto;
+        }
+
+        .price {
+            clear: left;
+            width: 100%;
+            text-align: center;
+        }
+
+        .price {
+            color: Grey;
+        }
+
+        label, button, input {
+            float: left;
+            clear: left;
+            width: 100%;
+            font-family: 'Roboto', sans-serif;
+            font-weight: 300;
+            font-size: 1em;
+            text-align: center;
+            margin: 0.2em auto;
+        }
+
+        input:focus {
+            outline-color: #fdf;
+        }
+
+        label {
+            width: 60%;
+        }
+
+        .text-box input {
+            width: 15%;
+            clear: none;
+        }
+
+        .text-box button {
+            margin-top: 1em;
+        }
+
+        button {
+            padding: 2%;
+            background-color: #dfd;
+            border: none;
+            border-radius: 2%;
+        }
+
+        button:hover {
+            bottom: 0.1em;
+        }
+
+        button:focus {
+            outline: 0;
+        }
+
+        button:active {
+            bottom: 0;
+            background-color: #fdf;
+        }
+        .cart-section {
+            width: 100%;
+            float: left;
+            padding: 1%;
+            border-bottom: 0.01em solid #dddbdb;
+        }
+        .table-heading, .table-content {
+            width: 75%;
+            margin: 1% 12.25%;
+            float: left;
+            background-color: #dfd;
+        }
+
+        .table-heading h2 {
+            padding: 1%;
+            margin: 0;
+            text-align: center;
+        }
+
+        .cart-product {
+            width: 50%;
+            float: left;
+        }
+
+        .cart-price {
+            width: 15%;
+            float: left;
+        }
+
+        .cart-quantity {
+            width: 10%;
+            float: left;
+        }
+
+        .cart-total {
+            width: 25%;
+            float: left;
+        }
+
+        .cart-image-box {
+            width: 20%;
+            overflow: hidden;
+            border-radius: 2%;
+            float: left;
+            margin: 1%;
+        }
+
+        .cart-images {
+            height: 7em;
+            background-size: cover;
+            background-position: center center;
+            background-repeat: no-repeat;
+        }
+
+        .cart-item {
+            width: 20%;
+            float: left;
+            margin: 3.2em 1%;
+            text-align: center;
+        }
+        .cart-description {
+            width: 53%;
+            float: left;
+            margin: 3.2em 1%;
+            font-family: 'Roboto', sans-serif;
+            font-weight: 300;
+            font-size: 1em;
+            text-align: center;
+        }
+
+        .cart-price h3, .cart-total h3 {
+            margin: 3.2em 5% 3.2em 20%;
+            width: 60%;
+        }
+
+        .cart-quantity input {
+            margin: 3.2em 1%;
+            border: none;
+        }
+
+        .remove {
+            width: 10%;
+            margin: 1px;
+            float: right;
+            clear: right;
+        }
+
+        .coupon {
+            width: 20%;
+            background-color: #dfd;
+            margin: 1% 1% 1% 12.25%;
+            float: left;
+            height: 6em;
+        }
+
+        .coupon input {
+            width: 60%;
+            border: none;
+            margin: 12.75% 5%;
+            padding: 1%;
+        }
+
+        .coupon button {
+            width: 25%;
+            float: left;
+            clear: right;
+            margin: 12% 5% 12% 0;
+        }
+
+        .keep-shopping {
+            width: 15%;
+            height: 6em;
+            float: left;
+            margin: 1% auto;
+            padding: 1%;
+            background-color: #dfd;
+        }
+
+        .keep-shopping button {
+            text-transform: uppercase;
+            margin: 12% auto;
+
+        }
+
+        .checkout {
+            width: 37.25%;
+            margin: 1% 12.75% 1% 1%;
+            float: right;
+            background-color: #dfd;
+            height: 6em;
+        }
+
+        .checkout button {
+            width: 30%;
+            clear: none;
+            margin: 5.4% 0 5.4% 5.5%;
+            text-transform: uppercase;
+        }
+
+        .final-cart-total {
+            width: 15%;
+            float: right;
+            margin: 7%;
+            background-color: White;
+        }
+
+        .final-cart-total h3 {
+            color: Black;
+        }
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #333;
+        }
+
+        li {
+            float: left;
+        }
+
+        li a, .dropbtn {
+            display: inline-block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        li a:hover, .dropdown:hover .dropbtn {
+            background-color: red;
+        }
+
+        li.dropdown {
+            display: inline-block;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+        }
+
+        .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            text-align: left;
+        }
+
+        .dropdown-content a:hover :hover {
+            background-color: #f1f1f1;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        .google_translate_element {
+            float: right;
+        }
+
+        body {
+            background-image: url("https://cdn.pixabay.com/photo/2017/02/16/19/47/bokeh-2072271_1280.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+    </style>
+</head>
+<body>
+<ul>
+    <li><a th:href="@{/home}">Home</a></li>
+    <li><a th:href="@{/aboutUs}">About</a></li>
+    <li class="dropdown">
+        <a href="javascript:void(0)" class="dropbtn">Menu</a>
+        <div class="dropdown-content">
+            <a href="#">Profile</a>
+            <a onclick="window.print()">Print Page</a>
+            <a href="#">Contact Us</a>
+            <a th:href="@{/home}">Log Out</a>
+        </div>
+    </li>
+    <li><a th:href="@{/logout}">Logout</a></li>
+    <div id="google_translate_element" class="google_translate_element"></div>
+</ul>
+<div class="cart-section">
+
+    <div class="table-heading">
+        <h2 class="cart-product">Product</h2>
+        <h2 class="cart-price">Price</h2>
+        <h2 class="cart-quantity">Quantity</h2>
+        <h2 class="cart-total">Total</h2>
+    </div>
+
+    <div class="table-content" th:each="lists : ${list}">
+        <div class="cart-product">
+            <div class="cart-image-box">
+                <div class="cart-images" id="image-10"></div>
+            </div>
+            <h2 class="cart-item">
+                <span th:text="${lists.name}"> Name </span>
+            </h2>
+            <p class="cart-description">Mobile Description</p>
+        </div>
+        <div class="cart-price">
+            <h3 class="price">
+                <span th:text="${lists.price}"> Price </span>
+            </h3>
+        </div>
+        <div class="cart-quantity">
+            <input type="text" name="cart-1-quantity" id="cart-1-quantity" value="1">
+        </div>
+        <div class="cart-total">
+            <h3 class="price">
+                <span th:text="${lists.price}"> Price </span>
+            </h3>
+            <button type="button" class="remove" ><a th:href="@{/cart/delete/{id}(id=${lists.productId})}">X</a></button>
+        </div>
+    </div>
+
+    <div class="coupon">
+        <!--    <input type="text" name="coupon" id="coupon" placeholder="COUPON CODE">-->
+        <!--    <button type="button" name="coupon" id="coupon">Submit</button>-->
+    </div>
+
+    <div class="checkout">
+        <!--    <button type="button" name="update" id="update">Update</button>-->
+        <button type="button" name="checkout" id="checkout"><a th:href="@{/confirm}">Place Order</a></button>
+        <div class="final-cart-total">
+            <h3 class="price">Total</h3>
+        </div>
+    </div>
+
+    <div class="keep-shopping">
+        <button type="button" name="keep-shopping" id="keep-shopping"><a th:href="@{/shop}">Keep Shopping</a></button>
+    </div>
+
+</div>
+</body>
+</html>
+
+
+
+
+

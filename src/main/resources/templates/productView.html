@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({pageLanguage: 'en'}, 'google_translate_element');
+        }
+    </script>
+    <script type="text/javascript"
+            src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap');
+
+        *{
+            box-sizing: border-box;
+            padding: 0;
+            margin: 0;
+            font-family: 'Open Sans', sans-serif;
+        }
+        body{
+            line-height: 1.5;
+        }
+        .card-wrapper{
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+        img{
+            width: 100%;
+            display: block;
+        }
+        .img-display{
+            overflow: hidden;
+        }
+        .img-showcase{
+            display: flex;
+            width: 100%;
+            transition: all 0.5s ease;
+        }
+        .img-showcase img{
+            min-width: 100%;
+        }
+        .img-select{
+            display: flex;
+        }
+        .img-item{
+            margin: 0.3rem;
+        }
+        .img-item:nth-child(1),
+        .img-item:nth-child(2),
+        .img-item:nth-child(3){
+            margin-right: 0;
+        }
+        .img-item:hover{
+            opacity: 0.8;
+        }
+        .product-content{
+            padding: 2rem 1rem;
+        }
+        .product-title{
+            font-size: 3rem;
+            text-transform: capitalize;
+            font-weight: 700;
+            position: relative;
+            color: #12263a;
+            margin: 1rem 0;
+        }
+        .product-title::after{
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            height: 4px;
+            width: 80px;
+            background: #12263a;
+        }
+        .product-link{
+            text-decoration: none;
+            text-transform: uppercase;
+            font-weight: 400;
+            font-size: 0.9rem;
+            display: inline-block;
+            margin-bottom: 0.5rem;
+            background: #256eff;
+            color: #fff;
+            padding: 0 0.3rem;
+            transition: all 0.5s ease;
+        }
+        .product-link:hover{
+            opacity: 0.9;
+        }
+        .product-rating{
+            color: #ffc107;
+        }
+        .product-rating span{
+            font-weight: 600;
+            color: #252525;
+        }
+        .product-price{
+            margin: 1rem 0;
+            font-size: 1rem;
+            font-weight: 700;
+        }
+        .product-price span{
+            font-weight: 400;
+        }
+        .last-price span{
+            color: #f64749;
+            text-decoration: line-through;
+        }
+        .new-price span{
+            color: #256eff;
+        }
+        .product-detail h2{
+            text-transform: capitalize;
+            color: #12263a;
+            padding-bottom: 0.6rem;
+        }
+        .product-detail p{
+            font-size: 0.9rem;
+            padding: 0.3rem;
+            opacity: 0.8;
+        }
+        .product-detail ul{
+            margin: 1rem 0;
+            font-size: 0.9rem;
+        }
+        .product-detail ul li{
+            margin: 0;
+            list-style: none;
+            background: url(https://fadzrinmadu.github.io/hosted-assets/product-detail-page-design-with-image-slider-html-css-and-javascript/checked.png) left center no-repeat;
+            background-size: 18px;
+            padding-left: 1.7rem;
+            margin: 0.4rem 0;
+            font-weight: 600;
+            opacity: 0.9;
+        }
+        .product-detail ul li span{
+            font-weight: 400;
+        }
+        .purchase-info{
+            margin: 1.5rem 0;
+        }
+        .purchase-info input,
+        .purchase-info .btn{
+            border: 1.5px solid #ddd;
+            border-radius: 25px;
+            text-align: center;
+            padding: 0.45rem 0.8rem;
+            outline: 0;
+            margin-right: 0.2rem;
+            margin-bottom: 1rem;
+        }
+        .purchase-info input{
+            width: 60px;
+        }
+        .purchase-info .btn{
+            cursor: pointer;
+            color: #fff;
+        }
+        .purchase-info .btn:first-of-type{
+            background: #256eff;
+        }
+        .purchase-info .btn:last-of-type{
+            background: #f64749;
+        }
+        .purchase-info .btn:hover{
+            opacity: 0.9;
+        }
+        .social-links{
+            display: flex;
+            align-items: center;
+        }
+        .social-links a{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 32px;
+            height: 32px;
+            color: #000;
+            border: 1px solid #000;
+            margin: 0 0.2rem;
+            border-radius: 50%;
+            text-decoration: none;
+            font-size: 0.8rem;
+            transition: all 0.5s ease;
+        }
+        .social-links a:hover{
+            background: #000;
+            border-color: transparent;
+            color: #fff;
+        }
+
+        @media screen and (min-width: 992px){
+            .card{
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                grid-gap: 1.5rem;
+            }
+            .card-wrapper{
+                height: 100vh;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            .product-imgs{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+            }
+            .product-content{
+                padding-top: 0;
+            }
+        }
+
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #333;
+        }
+
+        li {
+            float: left;
+        }
+
+        li a, .dropbtn {
+            display: inline-block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        li a:hover, .dropdown:hover .dropbtn {
+            background-color: red;
+        }
+
+        li.dropdown {
+            display: inline-block;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+        }
+
+        .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            text-align: left;
+        }
+
+        .dropdown-content a:hover :hover {
+            background-color: #f1f1f1;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        .google_translate_element {
+            float: right;
+        }
+
+        body {
+            background-image: url("https://cdn.pixabay.com/photo/2017/02/16/19/47/bokeh-2072271_1280.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+    </style>
+</head>
+<body>
+<ul>
+    <li><a th:href="@{/home}">Home</a></li>
+    <li><a th:href="@{/aboutUs}">About</a></li>
+    <li class="dropdown">
+        <a href="javascript:void(0)" class="dropbtn">Menu</a>
+        <div class="dropdown-content">
+            <a href="#">Profile</a>
+            <a onclick="window.print()">Print Page</a>
+            <a href="#">Contact Us</a>
+            <a th:href="@{/home}">Log Out</a>
+        </div>
+    </li>
+    <li><a th:href="@{/checkout}">Checkout</a></li>
+    <li><a th:href="@{/logout}">Logout</a></li>
+
+    <div id="google_translate_element" class="google_translate_element"></div>
+
+</ul>
+<div class = "card-wrapper">
+    <div class = "card">
+        <!-- card left -->
+        <div class = "product-imgs">
+            <div class = "img-display">
+                <div class = "img-showcase">
+                    <img src = "https://bsmedia.business-standard.com/_media/bs/img/about-page/1562576538.jpg" >
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- card right -->
+    <div class = "product-content">
+        <h2 class = "product-title"><span th:text="${lists.name}"> name </span></h2>
+        <a href = "#" class = "product-link">visit nike store</a>
+        <div class = "product-rating">
+            <!--<i class = "fas fa-star"></i>
+            <i class = "fas fa-star"></i>
+            <i class = "fas fa-star"></i>
+            <i class = "fas fa-star"></i>
+            <i class = "fas fa-star-half-alt"></i>-->
+            <span>4.7(21)</span>
+        </div>
+
+        <div class = "product-price">
+            <p class = "last-price">Old Price: <span>₹257.00</span></p>
+            <p class = "new-price">New Price: <span th:text="${lists.Price}"> Price </span></p>
+        </div>
+
+        <div class = "product-detail">
+            <h2>About this item: </h2>
+            <p>This Certified Refurbished product is tested to work and look like new with minimal to no signs of wear & tear; the product comes with relevant accessories (Except headphone and case) and is backed by a minimum six month supplier-backed warranty; box may be generic
+                Rear Camera - 48MP (Primary) + 5 MP (Tele-photo) | Front Camera - 16MP</p>
+            <p>16.2814 centimeters (6.41-inch) multi-touch capacitive touchscreen with 2340 x 1080 pixels resolution</p>
+            <ul>
+                <li>Color: <span th:text="${lists.color}"></span></li>
+                <li>Available: <span>in stock</span></li>
+                <li>Category: <span>Mobile</span></li>
+                <li>Shipping Area: <span>All over the world</span></li>
+                <li>Shipping Fee: <span>Free</span></li>
+            </ul>
+        </div>
+
+        <div class = "purchase-info">
+            <input type = "number" min = "0" value = "1">
+            <button type = "button" class = "btn">
+                <a th:href="@{/cart/add/{id}(id=${lists.productId})}">Add to Cart</a>
+            </button>
+        </div>
+
+        <div class = "social-links">
+            <p>Share At: </p>
+            <a href = "#">
+                <i class = "fab fa-facebook-f"></i>
+            </a>
+            <a href = "#">
+                <i class = "fab fa-twitter"></i>
+            </a>
+            <a href = "#">
+                <i class = "fab fa-instagram"></i>
+            </a>
+            <a href = "#">
+                <i class = "fab fa-whatsapp"></i>
+            </a>
+            <a href = "#">
+                <i class = "fab fa-pinterest"></i>
+            </a>
+        </div>
+    </div>
+</div>
+</div>
+</body>
+</html>

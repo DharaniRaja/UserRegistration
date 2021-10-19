@@ -1,0 +1,268 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({pageLanguage: 'en'}, 'google_translate_element');
+        }
+    </script>
+    <script type="text/javascript"
+            src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+    <style>
+
+        /* Font from Google fonts */
+
+        @import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,900');
+
+
+        /* Color palette */
+
+        $background-color: #00171F;
+        $footer-color: #003459;
+        $details-color: #00A7E1;
+        $font-color: #FAFAFA;
+        $submit-color: #00CC73;
+        $submit-color-darker: #00824A;
+
+
+        /* Basic styles */
+
+        html, body {
+            height: 100%;
+            font-family: 'Source Sans Pro', sans-serif;
+            background-color: $background-color;
+            color: $font-color;
+        }
+
+        /* Form Styles */
+
+        .form {
+            max-width: 610px;
+            margin: 60px auto;
+        }
+
+        .form__answer {
+            display: inline-block;
+            box-sizing: border-box;
+            width: 23%;
+            margin: 20px 1% 20px 0;
+            height: 180px;
+            vertical-align: top;
+            font-size: 22px;
+            text-align: center;
+        }
+
+        label {
+            border: 1px solid rgba($font-color,.15);
+            box-sizing: border-box;
+            display: block;
+            height: 100%;
+            width: 100%;
+            padding: 10px 10px 30px 10px;
+            cursor: pointer;
+            opacity: .5;
+            transition: all .5s ease-in-out;
+        &:hover, &:focus, &:active {
+                               border: 1px solid rgba($font-color,.5);
+                           }
+        }
+
+        .form__button {
+            height: 40px;
+            border: none;
+            background-color: $submit-color;
+            color: $font-color;
+            text-transform: uppercase;
+            font-family: 'Source Sans Pro', sans-serif;
+            padding: 0 20px;
+            border-radius: 20px;
+            font-weight: 900;
+            cursor: pointer;
+            margin: 20px 0;
+            transition: all .25s ease-in-out;
+        &:hover, &:focus {
+                      background-color: $submit-color-darker;
+                      text-shadow: 1px 1px 1px rgba(0,0,0,.25);
+                      outline: none;
+                  }
+        }
+
+
+        /* Input style */
+
+        input[type="radio"] {
+            opacity: 0;
+            width: 0;
+            height: 0;
+        }
+
+        input[type="radio"]:active ~ label {
+            opacity: 1;
+        }
+
+        input[type="radio"]:checked ~ label {
+            opacity: 1;
+            border: 1px solid $font-color;
+        }
+
+
+        /* Footer Styles */
+
+        footer {
+            background-color: $footer-color;
+            position: relative;
+            padding: 20px;
+        h2, h3, p, ul {
+            max-width: 610px;
+            margin: 20px auto;
+        }
+        }
+
+        .footer__title {
+            font-size: 30px;
+            margin-top: 40px;
+            color: $background-color;
+        }
+
+        .footer__subtitle {
+            font-size: 22px;
+        }
+
+        .footer__parragraph {
+            line-height: 1.5em;
+            font-size: 22px;
+        a {
+            color: $details-color;
+        }
+        }
+
+        .footer__list {
+            @extend .footer__parragraph;
+        }
+
+        .copyright {
+            @extend .footer__parragraph;
+            text-align: center;
+            border-top: 1px dashed rgba($font-color,.15);
+            padding: 10px 0;
+            margin: 40px auto;
+        }
+
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #333;
+        }
+
+        li {
+            float: left;
+        }
+
+        li a, .dropbtn {
+            display: inline-block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        li a:hover, .dropdown:hover .dropbtn {
+            background-color: red;
+        }
+
+        li.dropdown {
+            display: inline-block;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+        }
+
+        .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            text-align: left;
+        }
+
+        .dropdown-content a:hover :hover {
+            background-color: #f1f1f1;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        .google_translate_element {
+            float: right;
+        }
+
+        body {
+            background-image: url("https://mcdn.wallpapersafari.com/medium/14/37/VcPLAp.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+    </style>
+</head>
+<body>
+<ul>
+    <li><a th:href="@{/home}">Home</a></li>
+    <li><a th:href="@{/aboutUs}">About</a></li>
+    <li class="dropdown">
+        <a href="javascript:void(0)" class="dropbtn">Menu</a>
+        <div class="dropdown-content">
+            <a href="#">Profile</a>
+            <a onclick="window.print()">Print Page</a>
+            <a href="#">Contact Us</a>
+            <a th:href="@{/home}">Log Out</a>
+        </div>
+    </li>
+    <li><a th:href="@{/checkout}">Checkout</a></li>
+    <li><a th:href="@{/logout}">Logout</a></li>
+
+    <div id="google_translate_element" class="google_translate_element"></div>
+
+</ul>
+<div class="form">
+
+    <form method="post" action="/payment" >
+        <div class="form__answer">
+            <input type="radio"
+                   name="match"
+                   id="match_1"
+                   value="COD"
+                   checked>
+            <label for="match_1">COD</label>
+        </div>
+
+        <p class="form__answer">
+            <input type="radio" name="match" id="match_2" value="CreditOrDebit">
+            <label for="match_2">
+                Credit Card
+            </label>
+        </p>
+
+        <p class="form__answer">
+            <input type="radio" name="match" id="match_4" value="NetBanking">
+            <label for="match_4">
+                Net Banking
+            </label>
+        </p>
+        </fieldset>
+        <button class="form__button" type="submit">Confirm Payment Method</button>
+    </form>
+</div>
+
+</body>
+</html>

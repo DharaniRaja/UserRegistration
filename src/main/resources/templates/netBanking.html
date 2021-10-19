@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({pageLanguage: 'en'}, 'google_translate_element');
+        }
+    </script>
+    <script type="text/javascript"
+            src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+    <style>
+        table {
+            font-family: "Lato", "sans-serif";
+        }
+
+        input[type=text], input[type=email], input[type=password], input[type=number], select {
+            width: 20%;
+            padding: 10px 10px;
+            margin: 10px 0;
+            display: inline-block;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+
+        }
+
+        input[type=submit] {
+            width: 10%;
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 10px;
+            margin: 8px 0;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+
+        }
+
+        input[type=submit]:hover {
+            background-color: #45a049;
+        }
+
+        div {
+            border-radius: 1px;
+            padding: 5px;
+        }
+
+        h2 {
+            text-align: center;
+        }
+
+        .container {
+            text-align: center;
+        }
+
+        body {
+            background-image: url("https://images.all-free-download.com/images/graphiclarge/background_from_autumn_leaves_200102.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #333;
+        }
+
+        li {
+            float: left;
+        }
+
+        li a, .dropbtn {
+            display: inline-block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        li a:hover, .dropdown:hover .dropbtn {
+            background-color: red;
+        }
+
+        li.dropdown {
+            display: inline-block;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+        }
+
+        .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            text-align: left;
+        }
+
+        .dropdown-content a:hover :hover {
+            background-color: #f1f1f1;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        .google_translate_element {
+            float: right;
+        }
+    </style>
+</head>
+<body>
+<ul>
+    <li><a th:href="@{/home}">Home</a></li>
+    <li><a th:href="@{/aboutUs}">About</a></li>
+    <li class="dropdown">
+        <a href="javascript:void(0)" class="dropbtn">Menu</a>
+        <div class="dropdown-content">
+            <a onclick="window.print()">Print Page</a>
+            <a href="#">Contact Us</a>
+        </div>
+    </li>
+    <div id="google_translate_element" class="google_translate_element"></div>
+</ul>
+<div>
+    <h2>Net Banking</h2>
+</div>
+<div class="container">
+    <form name="form1" method="post" action="/newUser" onsubmit="return required()">
+        <label for="name">Name</label><br>
+        <input type="text" id="name" name="name" placeholder="Your name.. " maxlength=15, minlength=2
+               pattern="[A-Za-z]+"
+               title="Only Characters "><br>
+
+        <label for="email">Email</label><br>
+        <input type="email" id="email" name="email" placeholder="Your Email.."><br>
+
+        <label for="password">Password</label><br>
+        <input type="password" id="password" name="password" placeholder="Your password.."
+               pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+               title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters"
+        ><br>
+
+        <label for="phoneNo">Phone Number</label><br>
+        <input type="text" id="phoneNo" name="phoneNo" placeholder="Your phone number.." pattern="[6-9]{1}[0-9]{9}"
+               title="Enter valid Mobile Number"><br>
+        <label for="address">Address</label><br>
+        <input type="text" id="address" name="address" placeholder="Your Address.."><br>
+
+        <input type="submit" value="Register">
+    </form>
+</div>
+</body>
+</html>

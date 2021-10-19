@@ -1,38 +1,63 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <style>
+        .container {
+            text-align: center;
+        }
+
+        body {
+            background-image: url("https://mcdn.wallpapersafari.com/medium/14/37/VcPLAp.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        table, th, td {
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+
+        table.center {
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+    </style>
+
 </head>
 <body>
 <div class="container text-center">
-
     <div>
         <h1>List of Users</h1>
     </div>
 
-    <div>
-        <table class="table table-striped table-bordered">
-            <thead class="thead-dark">
+    <div class="container">
+        <table class="table">
+            <thead>
             <tr>
-                <th>User ID</th>
+                <th>Id</th>
                 <th>Name</th>
-                <th>E-mail</th>
-                <th>Password</th>
-                <th>Address</th>
+                <th>Email</th>
+                <th>Phone Number</th>
+
             </tr>
             </thead>
             <tbody>
-            <tr th:each="user: ${listUsers}">
-                <td th:text="${user.id}">User ID</td>
-                <td th:text="${user.name}"> Name</td>
-                <td th:text="${user.email}">E-mail</td>
-                <td th:text="${user.password}">Password</td>
-                <td th:text="${user.address}">Address</td>
+            <tr>
+                <td><span th:text="${list.userId}"> Id </span></td>
+                <td><span th:text="${list.name}"> Name </span></td>
+                <td><span th:text="${list.email}">Email </span></td>
+                <td><span th:text="${list.phoneNo}"> Phone Number </span></td>
+
             </tr>
             </tbody>
         </table>
+        <br>
     </div>
+</div>
+<div class="shp">
+    <a class="hr" th:href="@{/shop}">Shop</a>
 </div>
 </body>
 </html>
